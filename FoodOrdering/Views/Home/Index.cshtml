@@ -1,0 +1,34 @@
+﻿@model List<FoodOrdering.Models.FoodViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div >
+    <div class="text-center">
+        <h1 class="display-4">Welcome To Asap Foods</h1>
+        <h4>Quick Delivery of Food To Any Location </h4>
+    </div>
+
+    <div class="align-items-md-center flex-row d-inline-flex">
+        @foreach (var food in Model)
+        {
+            @if (food.Price != 30)
+            {
+        <div class="p-5 bg-light m-3">
+            <img @food.Images[0] alt="@food.Name image">
+            <h5>@food.Name</h5>
+            <h6>@food.Price </h6>
+            <p>@food.Description</p>
+
+            <button class="btn btn-primary" type="submit"> $Purchase </button>
+
+        </div>
+            }
+
+        }
+    </div>
+
+</div>
