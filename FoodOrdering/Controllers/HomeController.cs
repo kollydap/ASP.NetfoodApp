@@ -51,6 +51,7 @@ namespace FoodOrdering.Controllers
 
         public IActionResult Privacy()
         {
+           
             return View();
         }
 
